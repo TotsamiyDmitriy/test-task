@@ -12,7 +12,7 @@ $black-87: #00000087;
 /* styles */
 
 .app {
-  height: 100vh;
+  height: 100%;
   font-family: 'Nunito', sans-serif;
   background-color: $bg-color;
   color: $black-87;
@@ -21,6 +21,11 @@ $black-87: #00000087;
 h1 {
   font-size: 40px;
   line-height: 40px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .header {
@@ -33,7 +38,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1024px;
+    max-width: 1170px;
     padding: 0 60px;
     width: 100%;
     .auth {
@@ -46,13 +51,13 @@ h1 {
 
 .container {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1170px;
   .banner {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../public/pexels-alexandr-podvalny-1227513.jpeg');
+    background-image: url('/pexels-alexandr-podvalny-1227513.jpeg');
     background-size: cover;
     height: 650px;
     width: 100%;
@@ -75,16 +80,39 @@ h1 {
       height: 323px;
       text-align: center;
       color: #fff;
-      p {
-        font-size: 16px;
-        line-height: 26px;
-      }
     }
   }
   .getTeammates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 140px;
-    
+    h1 {
+      color: #000000;
+      margin-bottom: 50px;
+    }
     .grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 370px);
+      gap: 29px;
+    }
+    .button {
+      margin-top: 50px;
+    }
+  }
+  .postTeammate {
+    height: 741px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+    }
+    .form {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
     }
   }
 }

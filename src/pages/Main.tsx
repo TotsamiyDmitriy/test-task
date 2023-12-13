@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../scss/main.module.scss';
-import { Banner, GetTeammates } from '../components';
+import { Banner, GetTeammates, PostTeammate } from '../components';
 
 const Main: React.FC = () => {
   const { container } = styles;
@@ -9,6 +9,7 @@ const Main: React.FC = () => {
     <div className={container}>
       <Banner></Banner>
       <GetTeammates></GetTeammates>
+      <PostTeammate></PostTeammate>
     </div>
   );
 };

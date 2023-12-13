@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../public/icon.svg';
+import Logo from '/icon.svg';
 import styles from '../scss/main.module.scss';
 import { Button } from '.';
 

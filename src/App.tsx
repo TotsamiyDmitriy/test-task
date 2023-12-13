@@ -2,6 +2,7 @@
 import React, { useReducer } from 'react';
 import { Header } from './components';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Context } from './main';
 
 import styles from './scss/main.module.scss';
 import Main from './pages/Main';
@@ -13,6 +14,7 @@ const App: React.FC = () => {
 
   const initialState: State = {
     data: undefined,
+    page: 1,
   };
 
   const reducer: React.Reducer<State, Action<DataType>> = (state, action) => {
@@ -21,6 +23,8 @@ const App: React.FC = () => {
     switch (type) {
       case 'SET_USERS':
         return { ...state, data: payload };
+      case 'INC_PAGE':
+        return { ...state, page: state.page++ };
 
       default:
         return state;
@@ -28,8 +32,6 @@ const App: React.FC = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  const Context = React.createContext({});
 
   const clientCall = axios.create({
     baseURL: 'https://frontend-test-assignment-api.abz.agency/api/v1/',
@@ -41,7 +43,7 @@ const App: React.FC = () => {
   React.useEffect(() => {
     (async () => {
       await clientCall
-        .get<DataType>('users?page=1&count=50')
+        .get<DataType>(`users?page=1&count=${6 * state.page}`)
         .then((res) => {
           dispatch({ type: 'SET_USERS', payload: res.data });
         })
@@ -50,9 +52,7 @@ const App: React.FC = () => {
           return {};
         });
     })();
-  }, [dispatch]);
-
-  console.log(state);
+  }, [dispatch, state.page]);
 
   return (
     <div className={app}>

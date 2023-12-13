@@ -1,7 +1,13 @@
 export interface State {
 	data? : DataType
+	page : number
   }
  
+export type TypeContext = {
+	state?: State;
+	dispatch?: React.Dispatch<Action<DataType>>;
+  };
+
 export type DataType = {
 
 		count: number,
@@ -11,10 +17,10 @@ export type DataType = {
 		total_pages:number,
 		total_users:number,
 		
-		users :Users[],	
+		users :User[],	
 }
 
-export type Users = {
+export type User = {
 	id : number,
 	name : string,
 	email : string,
@@ -28,7 +34,7 @@ export type Users = {
 
 
 export type Action<T> = {
-	type: "SET_USERS",
-	payload : T
+	type: "SET_USERS" | "INC_PAGE",
+	payload? : T
 }
 

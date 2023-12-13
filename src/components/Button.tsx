@@ -3,7 +3,7 @@ import '../scss/button.scss';
 
 interface IButton {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  className?: string;
+  className?: 'width-120';
   children?: string;
   disabled?: boolean;
 }
