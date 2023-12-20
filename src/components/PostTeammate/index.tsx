@@ -98,7 +98,7 @@ const PostTeammate: React.FC<PostTeammateProps> = ({
 
               <p className={styles.error}>{error && error}</p>
               <Button className={styles.submit} disabled={!isDirty}>
-                Submit
+                Sign up
               </Button>
             </form>
           </>
