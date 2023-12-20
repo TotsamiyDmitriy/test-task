@@ -29,6 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -36,19 +37,25 @@
     .email {
       max-width: 330px;
       white-space: nowrap;
+      width: 100%;
       overflow: hidden;
+      text-align: center;
       text-overflow: ellipsis;
     }
     .position {
       max-width: 330px;
       white-space: nowrap;
+      width: 100%;
       overflow: hidden;
+      text-align: center;
       text-overflow: ellipsis;
     }
     .phone {
       max-width: 330px;
       white-space: nowrap;
       overflow: hidden;
+      width: 100%;
+      text-align: center;
       text-overflow: ellipsis;
     }
   }
