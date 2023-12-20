@@ -2,7 +2,6 @@ import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { Token, User } from "../../types/mainTypes"
 import clientCall from "../../utils/axios"
 import { ControllerForm, PositionType, StatusTypes } from "../../types/redux"
-
 interface State {
 	data:{
 		status : StatusTypes,
@@ -122,6 +121,9 @@ export const fetchUsersData = createAsyncThunk<User[], number>('fetchUsersData',
 			case 409:
 				setError(response.data.message)				
 				break;
+				case 422:
+					setError('Invalid image type')				
+					break;
 			default:
 				break;
 		}

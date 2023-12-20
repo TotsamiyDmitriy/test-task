@@ -107,6 +107,8 @@ const Input: React.FC<IInput> = ({
               className={`${styles.input} ${controller?.errors[`${id}`] ? styles.error : ''}`}
               id="input0"
               type={type}
+              size={5000000}
+              accept="image/jpg, image/jpeg"
               required
             />
             <label className={styles.label} htmlFor="input0">

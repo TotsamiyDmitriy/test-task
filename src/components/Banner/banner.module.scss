@@ -33,6 +33,14 @@
   }
 }
 
+@media screen and (max-width: 769px) {
+  .container {
+    .banner {
+      height: 500px;
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .container {
     .banner {

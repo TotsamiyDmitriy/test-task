@@ -58,7 +58,7 @@ const PostTeammate: React.FC<PostTeammateProps> = ({
 
   return (
     <FormContext.Provider value={{ register, errors }}>
-      <div className={styles.postTeammate}>
+      <div className={styles.postTeammate} id="postTeammates">
         {positionsStatus === StatusTypes.PENDING ||
         (tokenStatus === StatusTypes.PENDING && loading) ? (
           <Preloader className="submit"></Preloader>

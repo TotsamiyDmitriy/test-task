@@ -21,7 +21,7 @@ const GetTeammates: React.FC<GetTeammatesProps> = ({ data, dispatch }) => {
   };
 
   return (
-    <div className={styles.getTeammates}>
+    <div className={styles.getTeammates} id="getTeammates">
       <h1>Working with GET request</h1>
       <div className={styles.grid}>
         {data.status === StatusTypes.PENDING ? (

@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '/icon.svg';
 import styles from './header.module.scss';
+import { Link } from 'react-scroll';
 import { Button } from '..';
 
 const Header: React.FC = () => {
@@ -13,8 +14,12 @@ const Header: React.FC = () => {
           <img src={Logo} alt="" />
         </div>
         <div className={auth}>
-          <Button className="users">Users</Button>
-          <Button className="signup">Sign up</Button>
+          <Link to="getTeammates" smooth={true} offset={-100} duration={500}>
+            <Button className="users">Users</Button>
+          </Link>
+          <Link to="postTeammates" smooth={true} offset={50} duration={500}>
+            <Button className="signup">Sign up</Button>
+          </Link>
         </div>
       </div>
     </div>
