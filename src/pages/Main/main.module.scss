@@ -1,0 +1,98 @@
+/* imports */
+
+@import 'reset-css';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital@0;1&display=swap');
+
+/* variables */
+
+$primary-color: #f4e041;
+$secondary-color: #00bdd3;
+$bg-color: #f8f8f8;
+$black-87: #00000087;
+/* styles */
+
+.container {
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  background-color: $bg-color;
+  color: $black-87;
+  padding-bottom: 100px;
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    .getTeammates {
+      .grid {
+        max-width: 904px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header {
+    .container {
+      max-width: 704px;
+      padding: 0 32px;
+    }
+  }
+  .container {
+    .getTeammates {
+      .grid {
+        max-width: 704px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 361px) {
+  .header {
+    .container {
+      max-width: 328px;
+      padding: 0 16px;
+    }
+  }
+  .container {
+    .banner {
+      .bannerTypography {
+        width: 328px;
+      }
+    }
+    .getTeammates {
+      h1 {
+        text-align: center;
+      }
+      .grid {
+        max-width: 328px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+    }
+    .postTeammate {
+      h1 {
+        text-align: center;
+      }
+      .form {
+        width: 328px;
+      }
+    }
+  }
+}
+
+@supports (text-overflow: -o-ellipsis-lastline) {
+  span {
+    display: block;
+  }
+}

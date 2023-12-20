@@ -1,14 +1,15 @@
 .main {
+  transition: 0.2s all;
   color: #000000;
-  max-width: 330px;
-  padding: 20px;
+  max-width: 370px;
+  width: 100%;
+  padding: 20px 0;
   background-color: #fff;
   border-radius: 16px;
   height: 214px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   .img {
     width: 70px;
     height: 70px;
@@ -17,9 +18,65 @@
   p {
     text-align: center;
     width: 100%;
+    max-width: 330px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .otherInfo {
+    p {
+      text-align: center;
+      max-width: 330px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .main {
+    max-width: 282px;
+    width: 100%;
+    p {
+      max-width: 222px;
+    }
+    .otherInfo {
+      p {
+        max-width: 222px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .main {
+    max-width: 344px;
+    width: 100%;
+    p {
+      max-width: 304px;
+    }
+    .otherInfo {
+      p {
+        max-width: 304px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .main {
+    max-width: 328px;
+    width: 100%;
+    p {
+      max-width: 288px;
+    }
+    .otherInfo {
+      p {
+        max-width: 288px;
+      }
+    }
   }
 }
 

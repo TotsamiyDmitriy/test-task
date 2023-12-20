@@ -1,21 +1,11 @@
-export interface State {
-	data? : DataType
-	page : number
-  }
- 
-export type TypeContext = {
-	state?: State;
-	dispatch?: React.Dispatch<Action<DataType>>;
-  };
-
 export type DataType = {
 
-		count: number,
-		links: {next_url : string | null, prev_url:string | null}
+		count?: number,
+		links?: {next_url : string | null, prev_url:string | null}
 		page:number,
-		success: boolean,
-		total_pages:number,
-		total_users:number,
+		success?: boolean,
+		total_pages?:number,
+		total_users?:number,
 		
 		users :User[],	
 }
@@ -32,9 +22,9 @@ export type User = {
 
 }
 
-
-export type Action<T> = {
-	type: "SET_USERS" | "INC_PAGE",
-	payload? : T
+export type Token = {
+	data : {
+		success : boolean,
+		token : string
+	}
 }
-

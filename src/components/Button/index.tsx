@@ -1,18 +1,18 @@
 import React from 'react';
-import '../scss/button.scss';
+import styles from './button.module.scss';
 
 interface IButton {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  className?: 'width-120';
+  className?: string;
   children?: string;
   disabled?: boolean;
 }
 
-const Button: React.FC<IButton> = ({ onClick, className, children, disabled = false }) => {
+const Button: React.FC<IButton> = ({ onClick, className = '', children, disabled = false }) => {
   return (
     <button
       onClick={onClick}
-      className={`button ${typeof className === 'undefined' ? '' : className}`}
+      className={`${styles.button} ${className && className}`}
       disabled={disabled}>
       {children}
     </button>

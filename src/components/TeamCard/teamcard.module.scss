@@ -1,0 +1,139 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 214px;
+  padding: 20px 0;
+  max-width: 370px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  color: #000;
+  .img {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .name {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 330px;
+  }
+  .otherInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .email {
+      max-width: 330px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .position {
+      max-width: 330px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .phone {
+      max-width: 330px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .main {
+    max-width: 282px;
+    width: 100%;
+    .name {
+      max-width: 242px;
+    }
+    .otherInfo {
+      .email {
+        max-width: 242px;
+      }
+      .position {
+        max-width: 242px;
+      }
+      .phone {
+        max-width: 242px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .main {
+    max-width: 344px;
+    width: 100%;
+    .name {
+      max-width: 304px;
+    }
+    .otherInfo {
+      .email {
+        max-width: 304px;
+      }
+      .position {
+        max-width: 304px;
+      }
+      .phone {
+        max-width: 304px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 541px) {
+  .main {
+    max-width: 246px;
+    width: 100%;
+    .name {
+      max-width: 186px;
+    }
+    .otherInfo {
+      .email {
+        max-width: 186px;
+      }
+      .position {
+        max-width: 186px;
+      }
+      .phone {
+        max-width: 186px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .main {
+    max-width: 328px;
+    width: 100%;
+    .name {
+      max-width: 288px;
+    }
+    .otherInfo {
+      .email {
+        max-width: 288px;
+      }
+      .position {
+        max-width: 288px;
+      }
+      .phone {
+        max-width: 288px;
+      }
+    }
+  }
+}

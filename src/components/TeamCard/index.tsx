@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../scss/teamcard.module.scss';
-import { User } from '../types/mainTypes';
+import styles from './teamcard.module.scss';
+import { User } from '../../types/mainTypes';
 
 const TeamCard: React.FC<User> = React.memo(({ id, name, email, position, phone, photo }) => {
   return (

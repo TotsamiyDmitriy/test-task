@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '/icon.svg';
-import styles from '../scss/main.module.scss';
-import { Button } from '.';
+import styles from './header.module.scss';
+import { Button } from '..';
 
 const Header: React.FC = () => {
   const { header, container, logo, auth } = styles;
